@@ -9,11 +9,11 @@
   },
   "name": "backend",
   "version": "1.0.0",
-  "main": "node index.js",
+  "main": "index.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
