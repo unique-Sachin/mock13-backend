@@ -12,13 +12,6 @@ const schema = mongoose.Schema({
   fee: { type: Number, required: true },
 });
 
-const appoinmentModel = mongoose.model("user", schema);
+const appoinmentModel = mongoose.model("appoinment", schema);
 
 module.exports = appoinmentModel;
-
-
-
-
-
-
-
