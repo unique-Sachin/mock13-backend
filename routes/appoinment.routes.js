@@ -2,7 +2,7 @@ const appoinmentModel = require("../models/appoinment.model");
 
 const appoinmentRoutes = require("express").Router();
 
-appoinmentRoutes.get("appoinment", async (req, res) => {
+appoinmentRoutes.get("appointment", async (req, res) => {
   try {
     const { userId } = req.body;
     const data = await appoinmentModel.find({ userId });
@@ -12,7 +12,7 @@ appoinmentRoutes.get("appoinment", async (req, res) => {
   }
 });
 
-appoinmentRoutes.post("appoinment", async (req, res) => {
+appoinmentRoutes.post("appointment", async (req, res) => {
   try {
     const {
       userId,
@@ -42,3 +42,4 @@ appoinmentRoutes.post("appoinment", async (req, res) => {
     res.send({ msg: "something went wrong", err });
   }
 });
+module.exports = appoinmentRoutes;
