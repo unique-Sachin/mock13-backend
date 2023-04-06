@@ -1,8 +1,9 @@
+const userAuthenticate = require("../middlewares/userAuthenticate.middleware");
 const appoinmentModel = require("../models/appoinment.model");
 
 const appoinmentRoutes = require("express").Router();
 
-appoinmentRoutes.get("appointment", async (req, res) => {
+appoinmentRoutes.get("/appointment", userAuthenticate, async (req, res) => {
   try {
     const { userId } = req.body;
     const data = await appoinmentModel.find({ userId });
@@ -12,7 +13,7 @@ appoinmentRoutes.get("appointment", async (req, res) => {
   }
 });
 
-appoinmentRoutes.post("appointment", async (req, res) => {
+appoinmentRoutes.post("/appointment", userAuthenticate, async (req, res) => {
   try {
     const {
       userId,
